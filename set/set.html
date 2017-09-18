@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/article_add.css"/>
+
+    <title>基本设置</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div id="pad-wrapper" class="form-page">
+        <div class="row-fluid form-wrapper">
+            <!-- left column -->
+            <div class="span8 column esystem">
+                <div class="field-box" style="height: 40px">
+                    <label>平台设置:</label>
+                    <div class="slider-frame">
+                        <span data-on-text="关闭平台"  data-off-text="开启平台" class="slider-button on" data-isopen="0">关闭平台</span>
+                    </div>
+                    <!--<input id="iso" value="0" type="hidden">-->
+                    <div class="setopen" data-on-text="平台已经关闭，请尽快开启，以免流失客户" data-off-text="平台已开启，需要关闭平台请谨慎操作">
+                        平台已开启，需要关闭平台请谨慎操作</div>
+                </div>
+                <div class="field-box">
+                    <label>网站名称：</label>
+                    <input class="span6" type="text" data-toggle="tooltip" data-trigger="focus" title="网站名称" data-placement="right" value="MT4" name="webname"/>
+                            <span class="sysset">
+                            	<a class="btn-glow primary webname">提交</a>
+                           	</span>
+                </div>
+                <!-- <div class="field-box">
+                    <label>一级分销比例：</label>
+                    <input class="span6" type="text" data-toggle="tooltip" data-trigger="focus" title="一级分销比例（请填写0.001-1之间的值）" data-placement="right" value="0.2" name="onelevel"/>
+                    <span class="sysset">
+                        <a class="btn-glow primary onelevel">提交</a>
+                       </span>
+                    <p><font color="red">注意：一级佣金=一级分销比例*总手续费*（1-平台比例）</font></p>
+                </div>
+                <div class="field-box">
+                    <label>二级分销比例：</label>
+                    <input class="span6" type="text" data-toggle="tooltip" data-trigger="focus" title="二级分销比例（请填写0.001-1之间的值）" data-placement="right" value="0.1" name="twolevel"/>
+                    <span class="sysset">
+                        <a class="btn-glow primary twolevel">提交</a>
+                       </span>
+                    <p><font color="red">注意：二级佣金=二级分销比例*总手续费*（1-平台比例）</font></p>
+                </div>
+                <div class="field-box">
+                    <label>平台比例：</label>
+                    <input class="span6" type="text" data-toggle="tooltip" data-trigger="focus" title="平台分销比例（请填写0.001-1之间的值）" data-placement="right" value="0.3" name="Pscale"/>
+                    <span class="sysset">
+                        <a class="btn-glow primary Pscale">提交</a>
+                       </span>
+                </div> -->
+                <div class="field-box">
+                    <label>全盘下单手续费：</label>
+                    <input class="form-control col-lg-2" type="text" data-toggle="tooltip" data-trigger="focus" title="全盘下单手续费" data-placement="right" value="2" name="costdesu"/>&nbsp;%
+                            <span class="sysset">
+                            	<a class="btn-glow primary costdesu">提交</a>
+                           	</span>
+                </div>
+                <div class="field-box">
+                    <label>单笔最小建仓价格：</label>
+                    <input class="span6" type="text" data-toggle="tooltip" data-trigger="focus" title="单笔最小建仓价格" data-placement="right" value="50" name="minorderamount"/>
+                            <span class="sysset">
+                            	<a class="btn-glow primary minorderamount">提交</a>
+                           	</span>
+                </div>
+                <div class="field-box">
+                    <label>单笔最大建仓价格：</label>
+                    <input class="span6" type="text" data-toggle="tooltip" data-trigger="focus" title="单笔最大建仓价格" data-placement="right" value="5000" name="maxorderamount"/>
+                            <span class="sysset">
+                            	<a class="btn-glow primary maxorderamount">提交</a>
+                           	</span>
+                </div>
+                <div class="field-box">
+                    <label>用户最大持仓总额：</label>
+                    <input class="span6" type="text" data-toggle="tooltip" data-trigger="focus" title="用户最大持仓总额" data-placement="right" value="50000" name="maxuseramount"/>
+                            <span class="sysset">
+                            	<a class="btn-glow primary maxuseramount">提交</a>
+                           	</span>
+                </div>
+                <div class="field-box">
+                    <label>注册赠送券：</label>
+                    <select name="registsendcp" id="registsendcp" style="margin-bottom:30px;">
+                        <option value="0">未选择优惠券</option>
+                    </select>
+                            <span class="sysset">
+                            	<a class="btn-glow primary registsendbtn">提交</a>
+                           	</span>
+                </div>
+                <div class="field-box">
+                    <label>默认允许偏离点数：</label>
+                    <input class="span6" type="text" data-toggle="tooltip" data-trigger="focus" title="默认允许偏离点数" data-placement="right" value="10" name="defdiancha"/>
+                            <span class="sysset">
+                                <a class="btn-glow primary setdefdianchabtn">提交</a>
+                            </span>
+                </div>
+                <!--<div class="field-box" style="margin-top: 0;height: 80px;">
+                    <label>平仓设置:</label>
+                    <div class="span8">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="settime" id="settime" value="option1" checked="" />自动休市时间设置
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="settime" id="setclose"  value="option2" />手动休市
+                            </label>
+                        </div>
+                        <div class="stime">
+                            开始时间：<input type="text" value="03/29/2014" class="input-large datepicker"><br/>
+                            结束时间：<input type="text" value="03/29/2014" class="input-large datepicker">
+                        </div>
+                    </div>
+                    <span class="sysset"><a class="btn-glow primary">提交</a></span>
+                </div>                           -->
+
+                <div class="field-box" style="margin-bottom: 0;">
+                    <label>网站公告:</label>
+                    <textarea class="span8" rows="4" id="notice">出入金通道升级，暂时只支持支付宝出入金操作，请各会员单位做好交易商告知工作。</textarea>
+                    <span class="sysset"><a class="btn-glow primary notice">提交</a></span>
+                    <span class="sysset" style="top:50px;"><a class="">开启</a>/<a class="">关闭</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/wysihtml5-0.3.0.js"></script>
+<script src="js/jquery-latest.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wysihtml5_0.0.2.js"></script>
+<script src="js/bootstrap.datepicker.js"></script>
+<script src="js/jquery.uniform.min.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    $(".notice").click(function(){
+        var notice = $("#notice").val();
+        $.ajax({
+            type:"post",
+            url:"/index.php/Admin/Super/esystem.html",
+            data:{"notice":notice},
+            success:function(data){
+                alert(data);
+            },
+            error:function(data){
+                alert(data);
+            }
+        });
+    })
+
+    $(".webname").click(function(){
+        var webname = $("input[name=webname]").val();
+        $.ajax({
+            type:"post",
+            url:"/index.php/Admin/Super/esystem.html",
+            data:{"webname":webname},
+            success:function(data){
+                alert(data);
+            },
+            error:function(data){
+                alert(data);
+            }
+        });
+    })
+    $(".onelevel").click(function(){
+        var onelevel = $("input[name=onelevel]").val();
+        $.ajax({
+            type:"post",
+            url:"/index.php/Admin/Super/esystem.html",
+            data:{"onelevel":onelevel},
+            success:function(data){
+                alert(data);
+            },
+            error:function(data){
+                alert(data);
+            }
+        });
+    })
+    $(".twolevel").click(function(){
+        var twolevel = $("input[name=twolevel]").val();
+        $.ajax({
+            type:"post",
+            url:"/index.php/Admin/Super/esystem.html",
+            data:{"twolevel":twolevel},
+            success:function(data){
+                alert(data);
+            },
+            error:function(data){
+                alert(data);
+            }
+        });
+    })
+    $(".costdesu").click(function(){
+        var costdesu = $("input[name=costdesu]").val();
+        $.ajax({
+            type:"post",
+            url:"/index.php/Admin/Super/esystem.html",
+            data:{"costdesu":costdesu},
+            success:function(data){
+                alert(data);
+            },
+            error:function(data){
+                alert(data);
+            }
+        });
+    })
+    $(".Pscale").click(function(){
+        var Pscale = $("input[name=Pscale]").val();
+        $.ajax({
+            type:"post",
+            url:"/index.php/Admin/Super/esystem.html",
+            data:{"Pscale":Pscale},
+            success:function(data){
+                alert(data);
+            },
+            error:function(data){
+                alert(data);
+            }
+        });
+    })
+
+    $(".maxorderamount").click(function(){
+        var maxorderamount = $("input[name=maxorderamount]").val();
+        $.ajax({
+            type:"post",
+            url:"/index.php/Admin/Super/esystem.html",
+            data:{"maxorderamount":maxorderamount},
+            success:function(data){
+                alert(data);
+            },
+            error:function(data){
+                alert(data);
+            }
+        });
+    })
+
+    $(".maxuseramount").click(function(){
+        var maxuseramount = $("input[name=maxuseramount]").val();
+        $.ajax({
+            type:"post",
+            url:"/index.php/Admin/Super/esystem.html",
+            data:{"maxuseramount":maxuseramount},
+            success:function(data){
+                alert(data);
+            },
+            error:function(data){
+                alert(data);
+            }
+        });
+    })
+    $(".minorderamount").click(function(){
+        var minorderamount = $("input[name=minorderamount]").val();
+        $.ajax({
+            type:"post",
+            url:"/index.php/Admin/Super/esystem.html",
+            data:{"minorderamount":minorderamount},
+            success:function(data){
+                alert(data);
+            },
+            error:function(data){
+                alert(data);
+            }
+        });
+    });
+    $("more").click(function(){
+        var more=$("#more").val();
+        $.ajax({
+            type:"post",
+            url:"",
+            data:{"more":more},
+            success:function
+        })
+    })
+    $(".registsendbtn").click(function(){
+        var registsendcp = $("#registsendcp").val();
+        $.ajax({
+            type:"post",
+            url:"/index.php/Admin/Super/esystem.html",
+            data:{"registsendcp":registsendcp},
+            success:function(data){
+                alert(data);
+            },
+            error:function(data){
+                alert(data);
+            }
+        });
+    })
+    $(".setdefdianchabtn").click(function(){
+        var defdiancha = $("input[name=defdiancha]").val();
+        $.ajax({
+            type:"post",
+            url:"/index.php/Admin/Super/esystem.html",
+            data:{"defdiancha":defdiancha},
+            success:function(data){
+                alert(data);
+            },
+            error:function(data){
+                alert(data);
+            }
+        });
+    })
+    $('.slider-button').click(function() {
+        var isopen = $(this).attr('data-isopen');
+        if(isopen==0){
+            $(this).attr('data-isopen','1');
+        }else{
+            $(this).attr('data-isopen','0');
+        }
+        $.ajax({
+            type:"post",
+            url:"/index.php/Admin/Super/esystem.html",
+            data:{"isopen":isopen},
+            success:function(data){
+                alert(data);
+            },
+            error:function(data){
+                alert(data);
+            }
+        });
+
+        if ($(this).hasClass("on")) {
+            $(this).removeClass('on').html($(this).data("off-text"));
+            $('.slider-frame').css('background-color','#d5dde4');
+            $('.slider-frame span	').css('color','#f00');
+        } else {
+            $(this).addClass('on').html($(this).data("on-text"));
+            $('.slider-frame').css('background-color','#468847');
+            $('.slider-frame span').css('color','#7e91aa');
+        }
+        if ($('.setopen').hasClass("on")) {
+            $('.setopen').removeClass('on').html($('.setopen').data("off-text"));
+        } else {
+            $('.setopen').addClass('on').html($('.setopen').data("on-text"));
+        }
+    });
+
+</script>
+</body>
+</html>

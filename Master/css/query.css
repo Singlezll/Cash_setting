@@ -1,0 +1,27 @@
+body,ul,li,p,button,a,.Theader,.Tbody{margin: 0;padding: 0;}
+body{width: 1024px;margin: 0 auto;}
+/*头部导航*/
+.Theader{
+    width: 1024px;
+    border: 1px solid #204d74;
+    background-color:#204d74;
+    color: #ffffff;
+}
+.Theader>a>.out{
+    display: inline-block;width: 29px;height: 28px;
+    background: url("../icon.png")4px 4px no-repeat; position:relative;top: 2px;left: -2px;}
+.Theader>a>.reset{
+    display: inline-block;width: 20px;height: 20px;background: url("../img/log.png")0px 0px no-repeat;
+}
+.Theader a:not(:first-child){ float:right;margin-left:10px;}
+.Theader a{color: #ffffff;text-decoration: none;}
+.Theader table,tr,td{border: 1px solid #204d74;}
+.Tbody>table{width: 100%;
+    border-collapse: collapse;text-align: right;
+    background-color: slategray;color: #fff;
+}
+/*底部*/
+.TBottom span:last-child{float: right}
+.TBottom{background-color: #204d74;color: #fff;}
+.TBottom option,select,input{background-color: #204d74;color: #fff;}
+.TBottom>span>input{display: inline-block;width: 15px;}

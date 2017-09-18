@@ -1,0 +1,83 @@
+/*Í·²¿ÂÖ²¥ÑùÊ½*/
+body{
+    background-image:url("../img/timg02.png");
+    color: #f8f8f8;
+}
+body,div,ul,li,a,img{margin: 0;padding: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none;}
+#header{position: relative;margin: 30px auto;width: 100%;height: 200px;}
+#banner{position:relative;width: 100%;height: 200px;overflow: hidden;}
+.imgList{position:relative;width:100%;height:200px;z-index: 10;overflow: hidden;}
+.imgList li img{  width: 100%;  height: 100%}
+.imgList li{margin-top:300px;text-align: center;}
+.imgList li.active{position: absolute;top:0;left:0;width:100%;margin-top:0;}
+#banner span{width:20px;height:40px;}
+#banner ul li a h1{color:#ffffff;}
+
+#lt, #rt{position: absolute;z-index: 20;cursor: pointer;color:rgba(0,0,0,.4)}
+#lt{left: 60px;top:75px;background:url(../img/head-icon1.png) -196px -178px;}
+#rt{right: 60px;top:75px;background:url(../img/head-icon1.png) -229px -178px;}
+.infoList table{margin:0 auto;}
+.infoList table td{width:50px;}
+.logo{background:rgba(0,0,0,0)}
+.logo img{width:200px;height:50px;}
+.infoList{position: absolute;left: 50%;transform:translateX(-50%);bottom:0;z-index: 30;
+    width:100%;height:50px;line-height:24px;
+    margin:0;box-sizing: border-box;
+    text-align: center;;background:rgba(0,0,0,0);}
+.infoList li{display: none;}
+.infoList .infoOn{display: inline;color: white;}
+.header{height:300px;}
+/*kÏßÍ¼*/
+#KLiner{
+  margin: 0 auto;
+}
+.KLiner{width:100%;height:300px; visibility: hidden;margin-top:20px;}
+.icon1{
+    border: 1px solid red;
+    display:inline-block;
+    width: 30px;
+    height: 30px;
+    color:#fff;
+    background: #3e3e3e;
+}
+/*µÇÂ½ ×¢²á Íü¼ÇÃÜÂë*/
+#one{
+    display: block;
+    margin: 2px auto;
+    background: #122b40;
+    color: #2e6da4;
+}
+#two,#three{
+    width:30%;
+    background: #122b40;
+    color: #2e6da4;
+}
+.btn+.btn{margin-left:0;}
+.form-btn{  text-align: center;}
+
+
+
+
+
+/* µÇÂ¼ µ¥Ñ¡¿ò*/
+#remember{opacity: 0;width:10px;height:15px;display: inline-block;}
+.radio-img{display: inline-block;
+    height:25px;width:25px;
+    background: url(../img/icon.png) -110px 0 no-repeat;
+}
+.radio-img.check{
+    background: url(../img/icon.png) -135px 0 no-repeat;
+}
+.form-horizontal .form-group .regtxt .form-warn{
+    display: inline-block;width:25px;height:25px;
+     position: relative;top:10px;
+    background: url(../img/icon.png) 0 0 no-repeat;}
+.form-horizontal .form-group .regtxt .form-error{
+    display: inline-block;width:25px;height:25px;
+    margin-top:7px;
+    margin-right:5px;
+    position: relative;top:10px;
+    background: url(../img/icon.png) -56px 0 no-repeat;}
+.form-horizontal .form-group .regtxt{display: none; color:#de0000;line-height:25px;}

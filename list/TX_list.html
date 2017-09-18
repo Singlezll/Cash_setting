@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/TX_list.css" />
+    <title>Master Yi Astor</title>
+</head>
+<body>
+<!--<link rel="stylesheet" href="css/" type="text/css" media="screen" />-->
+<!--<link href="css/datepicker.css" type="text/css" rel="stylesheet" />-->
+<style type="text/css">
+    input.search {
+        background:none !important;
+        width:150px !important;
+    }
+    select {
+        width:150px !important;
+    }
+</style>
+
+<div class="container-fluid">
+    <form method="get" action="/index.php/Admin/User/recharge.html" name="search">
+        <div id="pad-wrapper" class="users-list">
+            <div class="row-fluid header">
+                <h3>
+                    提现列表		  </h3>
+                <div class="span10 pull-right">
+                    <input type="hidden" name="optype" value="2"/>
+                    <div class="tpsearch">
+                        客户账号
+                        <input type="text" class="span6 search" name="username" value=""/>
+                    </div>
+                    <div class="tpsearch">
+                        操作日期
+                        <input type="date" data-date-format="yyyy-mm-dd" class="input-large datepicker" style="margin-bottom: 0;" name="opdate" value="2017-09-15">
+                    </div>
+                    <div class="tpsearch">
+                        操作状态
+                        <select  class="span6" name="state">
+                            <option value="">全部</option>
+                            <option value="1" >开始</option>
+                            <option value="2" >成功</option>
+                            <option value="3" >失败</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="span10 pull-right" style="margin-top:10px">
+                    <div class="tpsearch">
+                        审核状态
+                        <select  class="span6" name="checkstate">
+                            <option value="">全部</option>
+                            <option value="1" >待审核</option>
+                            <option value="2" >审核通过</option>
+                            <option value="3" >审核拒绝</option>
+                            <option value="100" >自动审核</option>
+                        </select>
+                    </div>
+                    <div class="tpsearch">
+                        审核人&nbsp;
+                        <input type="text" class="span6 search" name="checkuser" value=""/>
+                    </div>
+                    <div class="tpsearch">
+                        审核日期
+                        <input type="date" data-date-format="yyyy-mm-dd" class="input-large datepicker" style="margin-bottom: 0;" name="checkdate" id="checkdate" value="">
+                    </div>
+                </div>          <div class="span10 pull-right">
+                <div class="tpsearch">
+                    所属运营中心：
+                    <select name="companyid" style="width:200px" class="select2">
+                        <option value="0">请选择运营中心</option>
+                        <option value="1"
+                                />众盈信汇总运营<option value="2"
+                            />智和时代                      </select>
+                </div>
+                <div class="tpsearch">
+                    所属会员单位：
+                    <select name="companyid2" style="width:200px" class="select2">
+                        <option value="0">请选择会员单位</option>
+                    </select>
+                </div>
+                <div class="tpsearch">
+                    所属业务代理：
+                    <select name="companyid3" style="width:200px" class="select2">
+                        <option value="0">请选择业务代理</option>
+                    </select>
+                </div>
+            </div>
+                <div class="span10 pull-right" style="margin-top:10px;margin-bottom:10px">
+                    <div class="tpsearch">
+                        途径&nbsp;&nbsp;
+                        <select id="ostyle" class="span6" name="payway">
+                            <option value="">全部</option>
+                            <option value="weixin" >微信</option>
+                            <option value="alipay" >支付宝</option>
+                            <option value="unionpay" >银联</option>
+                        </select>
+                    </div>
+                    <div class="tpsearch">
+                        <!--<a href="javascript:void(0)" class="btn-flat info" onclick="document.forms['search'].submit();">-->
+                            <!--开始查找-->
+                        <!--</a>-->
+                        <button type="button" class="btn btn-default btn-info"
+                                href="javascript:void(0)" onclick="document.forms['search'].submit();">开始查找</button>
+                    </div>
+                </div>
+
+                <!-- Users table -->
+                <div class="row-fluid table">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th class="span2">
+                                编号
+                            </th>
+                            <th class="span2">
+                                <span class="line"></span>客户
+                            </th>
+                            <th class="span2">
+                                <span class="line"></span>所属运营中心
+                            </th>
+                            <th class="span2">
+                                <span class="line"></span>所属会员单位
+                            </th>
+                            <th class="span2">
+                                <span class="line"></span>所属业务代理
+                            </th>
+                            <th class="span2">
+                                <span class="line"></span>姓名
+                            </th>
+                            <th class="span2">
+                                <span class="line"></span>时间
+                            </th>
+                            <th class="span2">
+                                <span class="line"></span>状态
+                            </th>
+                            <th class="span2">
+                                <span class="line"></span>途径
+                            </th>
+                            <th class="span2 ">
+                                <span class="line"></span>金额
+                            </th>
+                            <th class="span2 ">
+                                <span class="line"></span>手续费
+                            </th>
+                            <th class="span2 ">
+                                <span class="line"></span>审核状态
+                            </th>
+                            <th class="span2 ">
+                                <span class="line"></span>审核人
+                            </th>
+                            <th class="span2 ">
+                                <span class="line"></span>审核时间
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody id="ajaxback">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="qjcz">
+                    汇总：（次数：<font color="#f00" size="4">0</font>次&nbsp;&nbsp;金额：<font color="#f00" size="4">0</font>元）
+                </div>
+
+                <div class="pagination pull-right">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+            </div>
+    </form>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/jquery-latest.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/popup_layer.js"></script>
+<script src="js/bootstrap.datepicker.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        setdashboardmenu("客户管理");
+
+        // datepicker plugin
+        $('.datepicker').datepicker().on('changeDate', function (ev) {
+            $(this).datepicker('hide');
+        });
+    });
+</script>
+
+
+<script type="text/javascript">
+    var wid = $(window).height();
+    document.writeln('<div id="popupLayer" style="position:absolute;z-index:2;width:100%;height:'+wid+'px;left:0;top:0;opacity:0.3;filter:Alpha(opacity=30);background:#000;display: none;">');
+</script>
+
+</body>
+</html>

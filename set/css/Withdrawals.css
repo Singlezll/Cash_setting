@@ -1,0 +1,10 @@
+.icon-plus-sign { display: inline-block;width: 20px;height: 20px;
+    background: url("../img/manager.png")1px -25px no-repeat;
+    position:relative;top: -6px;left: -2px;
+    background-color: #FFFFFF;
+}
+.icon-minus-sign { display: inline-block;width: 20px;height: 20px;
+    background: url("../img/manager.png") -36px -25px no-repeat;
+    position:relative;top: -6px;left: -2px;
+    background-color: #FFFFFF;
+}

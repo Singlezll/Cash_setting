@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>Master Yi Astor</title>
+    <link rel="stylesheet" href="css/start.css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/echarts.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+
+</head>
+<body>
+<div id="header"><!-- 最外层部分 -->
+    <div id="banner" class="container"><!-- 轮播部分 -->
+        <div class="logo"><img src="img/logo3.png" alt="logo"/></div>
+        <ul class="imgList"><!-- 图片部分 -->
+            <li class="active">
+                <a href="#"><h1>$9659.3</h1></a>
+            </li>
+            <li><a href="#"><h1> $5448.2</h1></a></li>
+            <li><a href="#"> <h1>$545414.2</h1> </a></li>
+        </ul>
+        <span  class="left-arr" id="lt"></span>
+        <span   class="right-arr" id="rt"></span>
+        <ul class="infoList"><!-- 图片左下角文字信息部分 -->
+            <li class="infoOn">
+                <table>
+                    <tr>
+                        <td>最高</td>
+                        <td>最低</td>
+                        <td>跌涨幅</td>
+                        <td>成交量</td>
+                    </tr>
+                    <tr>
+                        <td>$443.3</td>
+                        <td>$445.6</td>
+                        <td> $956.2 </td>
+                        <td>$412.3</td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                <table>
+                    <tr>
+                        <td>最高</td>
+                        <td>最低</td>
+                        <td>跌涨幅</td>
+                        <td>成交量</td>
+                    </tr>
+                    <tr>
+                        <td>$443.3</td>
+                        <td>$541.6</td>
+                        <td> $95.2 </td>
+                        <td>$312.5</td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                <table>
+                    <tr>
+                        <td>最高</td>
+                        <td>最低</td>
+                        <td>跌涨幅</td>
+                        <td>成交量</td>
+                    </tr>
+                    <tr>
+                        <td>$413.3</td>
+                        <td>$245.6</td>
+                        <td> $95.2 </td>
+                        <td>$212.3</td>
+                    </tr>
+                </table>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--K 线图-->
+<div class="Kliner">
+    <div id="KLiner" style="width: 100%;height: 300px"></div>
+</div>
+<!--登陆按钮-->
+<div id="button" class="container">
+    <button type="button"class="btn btn-primary btn-sm" id="one"  data-toggle="modal" data-target="#login">用户登陆</button>
+    <div class="row form-btn">
+        <button type="button" class="btn btn-primary btn-sm col-sm-3" id="two"  data-toggle="modal" data-target="#register" >注册</button>
+        <button type="button" class="btn btn-primary btn-sm col-sm-3" id="three" data-toggle="modal" data-target="#forgetPsd" >忘记密码</button>
+    </div>
+    <!--模态框 登录-->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="container">
+                    <button type="button" class="close"  data-dismiss="modal"  aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="container">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="payStage" class="col-sm-2 control-label">选择交易平台:</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="payStage">
+                                    <option>邮政</option>
+                                    <option>亚斯特.易大师</option>
+                                    <option>工商</option>
+                                    <option>建筑银行</option>
+                                    <option>平安银行</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="accoutLogin" class="col-sm-2 control-label">输入账号:</label>
+                            <div class="col-sm-10" >
+                                <input type="text" class="form-control" id="accoutLogin" placeholder="输入你的账号">
+                            </div>
+                        </div>
+                        <div class="form-group" >
+                            <label for="loginPwd" class="col-sm-2 control-label">输入密码:</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="loginPwd" placeholder="输入你的密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                        <input type="checkbox" id="remember" ><span class="radio-img check"></span><label for="remember">点击记住</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" data-dismiss="modal" class="btn btn-success">登陆</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--模态框 注册-->
+    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="container">
+                    <button type="button" class="close"  data-dismiss="modal"  aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="container">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="myAccout" class="col-sm-2 control-label">输入注册账号:</label>
+                            <div class="col-sm-10" >
+                                <input type="text" class="form-control" id="myAccout" placeholder="输入你的账号">
+                            </div>
+                        </div>
+
+                        <div class="form-group" >
+                            <label  class="col-sm-2 control-label">输入注册密码:</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="myPassword" placeholder="输入你的密码">
+                            </div>
+                            <div class="col-xs-12 regtxt"><span class="form-warn"></span> 输入密码至少6位，包含字母和数字</div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-4 col-lg-offset-3">
+                                <select class="form-control">
+                                    <option>+86</option>
+                                    <option>+125</option>
+                                    <option>+028</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-2"></div>
+                            <div class="col-xs-6 col-lg-offset-10" >
+
+                                <input type="text" id="phoneNum" class="form-control" placeholder="输入你的手机号">
+                            </div>
+                            <div class="regtxt col-xs-12"><span class="form-warn"></span> 请输入正确的手机号码</div>
+                        </div>
+
+                        <div class="container">
+                            <div>
+                                <label  class="col-sm-2 col-lg-4">输入邀请码:</label>
+                            </div>
+                            <div>
+                                <input type="text" class="form-control" placeholder="邀请码号码">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <strong>我已阅读并且同意相关服务条款和隐私政策</strong>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" align="center">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default btn-info">立即注册</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--模态框 忘记密码-->
+    <div class="modal fade" id="forgetPsd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="container">
+                        <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="container">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="exampleInputName2" class="col-sm-2 control-label">输入预留手机号:</label>
+                                <div class="col-sm-10" >
+                                    <input type="text" class="form-control" id="exampleInputName2" placeholder="输入你的手机">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-4 col-lg-offset-3">
+                                    <button  class="btn btn-default btn-success">获取验证码</button>
+                                </div>
+                                <div class="col-xs-8 col-lg-offset-10" >
+                                    <input type="text" class="form-control" placeholder="输入验证码">
+                                </div>
+                            </div>
+                            <div class="form-group" >
+                                <label for="newPwd" class="col-sm-2 control-label">设置新密码:</label>
+                                <div class="col-sm-10 form-control-icon">
+                                    <input type="password" class="form-control" id="newPwd" placeholder="输入你的新密码"><span class="form-right"></span>
+                                </div>
+                                <div class="regtxt"><span class="form-warn"></span>密码至少6位，包含数字和字母</div>
+                            </div>
+                            <div class="form-group" >
+                                <label for="confirmPwd" class="col-sm-2 control-label">确认密码:</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="confirmPwd" placeholder="输入确认密码">
+                                </div>
+                                <div class="col-xs-12 regtxt"><span class="form-error"></span>两次密码不相同，再次输入确认密码</div>
+                            </div>
+                            <div class="form-group" align="right">
+                                <div class="col-sm-offset-2 col-sm-7">
+                                    <button type="submit" class="btn btn-default btn-info">立即找回</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<script src="js/echarts.js"></script>
+<script src="js/start.js"></script>
+
+<script>
+    var more=echarts.init(document.getElementById("KLiner"));
+    more.setOption(option,true);
+
+</script>
+</body>
+</html>

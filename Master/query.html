@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/query.css"/>
+    <title>Master Yi Astor Query</title>
+</head>
+<body>
+    <div class="content">
+        <!--头-->
+        <div class="Theader">
+          <a href="#"><span class="out"></span>导出</a>
+          <a href="#"><span class="reset"></span>查询</a>
+          <a href="#">重置</a>
+        </div>
+        <!--内容-->
+        <div class="Tbody">
+            <table>
+            <tr>
+                <td>交易次数</td>
+                <td>盈利次数</td>
+                <td>亏损次数</td>
+                <td>平次数</td>
+                <td>胜率(%)</td>
+                <td>委托金额</td>
+                <td>交有效委托金额</td>
+                <td>亏损金额</td>
+                <td>盈利金额</td>
+                <td>实际金额</td>
+                <td>交易管理费</td>
+                <td>手续费</td>
+                <td>交易市场</td>
+            </tr>
+            <tr>
+                <td>45</td>
+                <td>12</td>
+                <td>10</td>
+                <td>0</td>
+                <td>65%</td>
+                <td>$89412.1</td>
+                <td>$214542.3</td>
+                <td>$110.3</td>
+                <td>$454212.1</td>
+                <td>$4212.6</td>
+                <td>$65</td>
+                <td>$545</td>
+                <td>微交易</td>
+            </tr>
+                <tr id="selProvs"></tr>
+                <tr class="order"></tr>
+                <tr class="order"></tr>
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+                <!--<tr class="order"></tr>-->
+            </table>
+            <div id="tb"></div>
+        </div>
+        <!--底部-->
+        <div class="TBottom">
+         <span>第 <input type="text"/> 页,</span>
+         <span>第2页</span>
+         <span>每行记录数
+            <select>
+                <option value="">200</option>
+                <option value="">100</option>
+                <option value="">50</option>
+            </select>
+         </span>
+            <span>显示1-200条，共354条</span>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/query.js"></script>
+</body>
+</html>
